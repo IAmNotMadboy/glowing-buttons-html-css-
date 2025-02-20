@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Buttons</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            overflow: hidden;
+            transition: 0.5s;
+            border-radius: 10px;
+            border: 2px solid #0ff;
+        }
+
+        a:hover {
+            background: #0ff;
+            color: #121212;
+            box-shadow: 0 0 10px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+        }
+
+        span {
+            position: absolute;
+            display: block;
+        }
+
+        span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #0ff);
+            animation: animate1 1s linear infinite;
+        }
+
+        @keyframes animate1 {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#"><span></span>Button 1</a>
+    <a href="#"><span></span>Button 2</a>
+
+</body>
+</html>
